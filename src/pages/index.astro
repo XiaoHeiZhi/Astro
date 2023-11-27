@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro.jsx";
-import Greeting from "../components/Greeting.jsx";
 const response = fetch("https://web-yapi.company.druidtech.net/mock/196/test");
 ---
 
@@ -9,7 +8,6 @@ const response = fetch("https://web-yapi.company.druidtech.net/mock/196/test");
     <h1>Welcome to <span class="text-gradient">Astro</span></h1>
     <a href="/about/" class="text-gradient">About</a>
     <br />
-    <Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} client:load />
     <br />
     <div>
       {response}
