@@ -1,6 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const response = fetch("https://web-yapi.company.druidtech.net/mock/196/test");
+
+export let data: any;
+
+export async function load() {
+  //在服务器端获取数据
+  data = fetch("https://web-yapi.company.druidtech.net/mock/196/test");
+}
 ---
 
 <Layout title="Welcome to Astro.">
@@ -8,9 +14,8 @@ const response = fetch("https://web-yapi.company.druidtech.net/mock/196/test");
     <h1>Welcome to <span class="text-gradient">Astro</span></h1>
     <a href="/about/" class="text-gradient">About</a>
     <br />
-    <br />
     <div>
-      {response}
+      {data}
     </div>
   </main>
 </Layout>
