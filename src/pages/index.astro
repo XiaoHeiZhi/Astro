@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-export let data: any;
+// export let data: any;
 
-export async function load() {
-  //在服务器端获取数据
-  data = await fetch("https://web-yapi.company.druidtech.net/mock/196/test");
-}
+// export async function load() {
+//   //在服务器端获取数据
+//   data = await fetch("https://web-yapi.company.druidtech.net/mock/196/test");
+// }
 ---
 
 <Layout title="Welcome to Astro.">
@@ -15,7 +15,7 @@ export async function load() {
     <a href="/about/" class="text-gradient">About</a>
     <br />
     <div>
-      {data}
+      <!-- {data} -->
     </div>
   </main>
 </Layout>
