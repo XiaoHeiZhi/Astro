@@ -5,7 +5,7 @@ export let data: any;
 
 export async function load() {
   //在服务器端获取数据
-  data = fetch("https://web-yapi.company.druidtech.net/mock/196/test");
+  data = await fetch("https://web-yapi.company.druidtech.net/mock/196/test");
 }
 ---
 
